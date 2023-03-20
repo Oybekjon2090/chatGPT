@@ -1,6 +1,7 @@
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:yandex_mapkit/yandex_mapkit.dart';
 
 
 
@@ -17,7 +18,7 @@ class AppWidget extends StatelessWidget {
           builder: (context, data) {
             if (data.data == ConnectivityResult.mobile ||
                 data.data == ConnectivityResult.wifi) {
-              return Container();
+              return YandexMap();
               // return BlocProvider(
               //   create: (context) => HomeCubit(),
               //   child: const HomePage(),
